@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-md-offset-4">
+            <div class="account-wall">
+
+                <form name="registerForm" class="form-signin">
+
+                <input name="user" ng-model="u.user" type="text" ng-pattern="/^[0-9a-zA-Z]+$/" class="form-control" placeholder="User" required autofocus>
+                <div class="help-block" ng-messages="registerForm.user.$error" ng-if="registerForm.user.$touched">
+                  <p ng-message="pattern" class="form-invalid">Your user should be alphanumeric.</p>
+                  <p ng-message="required" class="form-invalid">Your user is required.</p>
+                  <p ng-show="userExist" class="form-invalid">User name already exist.</p>
+                </div>
+
+                <input name="password" ng-model="u.password" type="password" ng-pattern="/^[0-9a-zA-Z]+$/" class="form-control"
+                    ng-minlength=7 placeholder="Password" required>
+                <div class="help-block" ng-messages="registerForm.password.$error" ng-if="registerForm.password.$touched">
+                  <p ng-message="pattern" class="form-invalid">Your password should be alphanumeric.</p>
+                  <p ng-message="minlength" class="form-invalid">Minimum 7 characters .</p>
+                </div>
+
+                <input name="confirmPassword" type="password" ng-pattern="/^[0-9a-zA-Z]+$/" class="form-control" ng-minlength=7
+                      placeholder="Confirm Password" required>
+                <div class="help-block" ng-messages="registerForm.confirmPassword.$error" ng-if="registerForm.confirmPassword.$touched">
+                  <p ng-message="pattern" class="form-invalid">Your password should be alphanumeric.</p>
+                  <p ng-message="minlength" class="form-invalid">Minimum 7 characters .</p>
+                </div>
+
+                <input name="name" ng-model="u.name" type="text" ng-pattern="/^[0-9a-zA-Z]+$/" class="form-control" placeholder="Name" required>
+                <div class="help-block" ng-messages="registerForm.name.$error" ng-if="registerForm.name.$touched">
+                  <p ng-message="pattern" class="form-invalid">Your name should be alphanumeric.</p>
+                  <p ng-message="required" class="form-invalid">Your name is required.</p>
+                </div>
+
+                <input name="lastName" ng-model="u.lastName" type="text" ng-pattern="/^[0-9a-zA-Z]+$/" class="form-control" placeholder="Last Name" required >
+                <div class="help-block" ng-messages="registerForm.lastName.$error" ng-if="registerForm.lastName.$touched">
+                  <p ng-message="pattern" class="form-invalid">Your last name should be alphanumeric.</p>
+                  <p ng-message="required" class="form-invalid">Your last name is required.</p>
+                </div>
+
+                <input name="email" ng-model="u.email" type="email" class="form-control" placeholder="Email" required >
+                <div class="help-block" ng-messages="registerForm.email.$error" ng-if="registerForm.email.$touched">
+                  <p ng-message="required" class="form-invalid">Your email is required.</p>
+                </div>
+
+                <button class="btn btn-lg btn-primary btn-block" type="submit" ng-click="registerForm.$valid && register()">
+                    Register</button>
+
+                <label class="checkbox pull-left">
+                    <input ng-model="admin" type="checkbox" value="admin">
+                    Admin
+                </label>
+
+                <a href="#/" class="pull-right need-help">Need help? </a><span class="clearfix"></span>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

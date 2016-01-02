@@ -1,0 +1,47 @@
+<html ng-app="comicsApp">
+  <head>
+    <title>Comics</title>
+
+    <base href="">
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="styles/simple-sidebar.css" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-messages.js"></script>
+    <script src="app.js"></script>
+    <script src="controllers/userController.js"></script>
+    <script src="controllers/storeController.js"></script>
+    <script src="controllers/loginController.js"></script>
+    <script src="controllers/mainController.js"></script>
+    <script src="controllers/registerController.js"></script>
+    <script src="services/services.js"></script>
+
+
+  </head>
+
+  <body background="images/background.jpg" ng-controller="StoreController" data-ng-init="getUsers()">
+
+    <div ng-controller="UserController">
+
+      <div id="wrap">
+        <div id="main"  ng-view>
+
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <ul>
+            <li><a href="#/main">Sitemap</a></li>
+            <li><a href="#/main">Network</a></li>
+            <li><a href="#/main">Terms and Conditions</a></li>
+        </ul>
+      </footer>
+      <!-- Footer -->
+
+  </div>
+  </body>
+</html>

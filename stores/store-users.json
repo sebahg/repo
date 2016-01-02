@@ -1,0 +1,35 @@
+[
+  {
+    "user":"seba1",
+    "password":"12345678",
+    "name": "Sebastian1",
+    "lastName":"Gallardo1",
+    "email":"sebashgallardoQgmail.com",
+    "role":"admin"
+  },
+  {
+    "user":"seba2",
+    "password":"12345678",
+    "name": "Sebastian2",
+    "lastName":"Gallardo2",
+    "email":"sebashgallardoQgmail.com",
+    "role":"user"
+  },
+  {
+    "user":"seba3",
+    "password":"12345678",
+    "name": "Sebastian3",
+    "lastName":"Gallardo3",
+    "email":"sebashgallardoQgmail.com",
+    "role":"user"
+  },
+  {
+    "user":"seba4",
+    "password":"12345678",
+    "name": "Sebastian4",
+    "lastName":"Gallardo4",
+    "email":"sebashgallardoQgmail.com",
+    "role":"user"
+  }
+
+]

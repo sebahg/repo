@@ -85,7 +85,9 @@ html, body {
 
 #wrap {
   min-height: 100%;
-
+  margin: 0 auto;
+  overflow: hidden;
+  height: auto;
 }
 
 #main {
@@ -94,7 +96,7 @@ html, body {
 }
 
 .footer {
-  position: relative;
+  position: fixed;
   background-color: #000;
   margin-top: -50px; /* negative value of footer height */
   height: 50px;
@@ -123,8 +125,34 @@ html, body {
   float:left;
   position:relative;
   right:50%;
-  margin: 15px;
+  margin: 12px;
 }
+.user-right{
+  position: absolute;
+  right: 100px;
+  width: 150px;
+  padding: 5px;
+  margin-top: 10px;
+  height: 30px
+}
+.admin{
+  position: absolute;
+  right: 250px;
+  width: 150px;
+  padding: 5px;
+  margin-top: 10px;
+  height: 30px
+}
+.logout{
+  position: absolute;
+  right: 0px;
+  width: 100px;
+  padding: 5px;
+  border: 1px;
+  margin-top: 10px;
+  height: 30px
+}
+
 #tab {
  float:left;
  left:50%;

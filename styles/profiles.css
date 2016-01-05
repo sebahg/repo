@@ -1,0 +1,18 @@
+.table {
+  position: absolute;
+  left: 300px;
+  width: 600px;
+  padding: 10px;
+  border: 1px solid #444;
+  margin-top: 300px;
+  margin-bottom: 100px;
+  height: 30px,auto;
+  background-color: #f7f7f7;
+}
+.table-col {
+  width: 150px;
+  height: 30px;
+}
+.table-col-email {
+  width: 300px;
+}

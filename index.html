@@ -8,9 +8,14 @@
     <link rel="stylesheet" type="text/css" href="styles/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="styles/simple-sidebar.css" />
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="styles/profiles.css" />
+    <link rel="stylesheet" type="text/css" href="styles/userProfile.css" />
+    <link rel="stylesheet" type="text/css" href="styles/carrousel.css" />
+    <link rel="stylesheet" type="text/css" href="styles/comics.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular-route.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-messages.js"></script>
+    <script type="text/javascript" src="scripts/ui-bootstrap-tpls.min.js"></script>
     <script src="app.js"></script>
     <script src="controllers/userController.js"></script>
     <script src="controllers/storeController.js"></script>
@@ -22,25 +27,18 @@
 
   </head>
 
-  <body background="images/background.jpg" ng-controller="StoreController" data-ng-init="getUsers()">
+  <body background="images/background.jpg" ng-controller="StoreController" data-ng-init="getData()">
 
     <div ng-controller="UserController">
 
       <div id="wrap">
-        <div id="main"  ng-view>
+        <div  ng-view>
 
         </div>
       </div>
 
-      <!-- Footer -->
-      <footer class="footer">
-        <ul>
-            <li><a href="#/main">Sitemap</a></li>
-            <li><a href="#/main">Network</a></li>
-            <li><a href="#/main">Terms and Conditions</a></li>
-        </ul>
-      </footer>
-      <!-- Footer -->
+      <footer-description></footer-description>
+
 
   </div>
   </body>

@@ -1,0 +1,28 @@
+<div class="table">
+    <table>
+    <thead>
+      <tr>
+        <th class="table-col">User</th>
+        <th class="table-col">First Name</th>
+        <th class="table-col">Last Name</th>
+        <th class="table-col table-col-email">Email</th>
+        <th class="table-col">Role</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="u in users">
+
+        <td class="table-col">{{u.user}}</td>
+        <td class="table-col">{{u.name}}</td>
+        <td class="table-col">{{u.lastName}}</td>
+        <td class="table-col table-col-email">{{u.email}}</td>
+        <td class="table-col">{{u.role}}</td>
+
+      </tr>
+
+    </tbody>
+    </table>
+
+  </div>
+  </div><!--/row-->

@@ -11,13 +11,16 @@
         <li><a href="#/main">News</a></li>
         <li><a href="#/main">Characters</a></li>
       </ul>
-        <li class="container-fluid navbar navbar-default pull-right"><a href="#/main">{{user.user}}</a></li>
+
     </div>
+  <span class="user-right" ng-click="showProfileAction()">Welcome <a href="">{{user.user}}</a></span>
+  <span class="admin" ng-click="showAdminUsersAction()"><a href="">Admin Users</a></span>
+  <span class="logout" ng-click="logout()"><a href="">Logout</a></span>
+
   </div>
+
 </nav>
 <!-- Navigation Bar-->
-
-
 
 <!-- Sidebar -->
 <div id="sidebar-wrapper">
@@ -40,3 +43,19 @@
     </ul>
 </div>
 <!-- /#sidebar-wrapper -->
+
+<!-- Carrousel -->
+<carrousel></carrousel>
+<!-- Carrousel -->
+
+<!-- user profile -->
+<user-profile ng-show="showProfile"></user-profile>
+<!-- user profile -->
+
+<!-- profiles -->
+<profiles ng-show="showProfiles"></profiles>
+<!-- profiles -->
+
+<!-- comics -->
+<comics ng-show="showComics"></comics>
+<!-- comics -->

@@ -1,0 +1,13 @@
+.userProfile {
+  position: absolute;
+  left: 300px;
+  width: 600px;
+  padding: 10px;
+  border: 1px solid #444;
+  margin-top: 300px;
+  height: 30px,auto;
+  background-color: #f7f7f7;
+}
+.profile{
+  margin-left: 10px;
+}

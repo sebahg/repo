@@ -4,7 +4,6 @@
     app.controller('MainController', function($scope, $location) {
       $scope.user = JSON.parse(sessionStorage.getItem("user"));
 
-
       $scope.myInterval = 3000;
       $scope.slides = [
         {
@@ -38,9 +37,17 @@
       $scope.showProfiles = false;
       $scope.showComics = true;
 
-      $scope.isAdmin = function() {
-        return $scope.user.role === "admin";
+      $scope.home = function() {
+        $scope.showProfiles = false;
+        $scope.showProfile = false;
+        $scope.showComics = true;
       };
+
+      $scope.isAdmin = function() {
+        return ($scope.user.role == "admin");
+      };
+
+      console.log($scope.isAdmin());
 
       $scope.showAdminUsersAction = function() {
         $scope.showProfiles = true;

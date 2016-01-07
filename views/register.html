@@ -16,14 +16,15 @@
                     ng-minlength=7 placeholder="Password" required>
                 <div class="help-block" ng-messages="registerForm.password.$error" ng-if="registerForm.password.$touched">
                   <p ng-message="pattern" class="form-invalid">Your password should be alphanumeric.</p>
-                  <p ng-message="minlength" class="form-invalid">Minimum 7 characters .</p>
+                  <p ng-message="minlength" class="form-invalid">Minimum 7 characters.</p>
                 </div>
 
-                <input name="confirmPassword" type="password" ng-pattern="/^[0-9a-zA-Z]+$/" class="form-control" ng-minlength=7
-                      placeholder="Confirm Password" required>
-                <div class="help-block" ng-messages="registerForm.confirmPassword.$error" ng-if="registerForm.confirmPassword.$touched">
+                <input name="confpassword" ng-model="confpassword" type="password" ng-pattern="/^[0-9a-zA-Z]+$/" class="form-control"
+                    ng-minlength=7 placeholder="Confirm Password" required>
+                <div class="help-block" ng-messages="registerForm.confpassword.$error" ng-if="registerForm.confpassword.$touched">
                   <p ng-message="pattern" class="form-invalid">Your password should be alphanumeric.</p>
-                  <p ng-message="minlength" class="form-invalid">Minimum 7 characters .</p>
+                  <p ng-message="minlength" class="form-invalid">Minimum 7 characters.</p>
+                  <p ng-hide="matchPassword" class="form-invalid">Passwords do not match.</p>
                 </div>
 
                 <input name="name" ng-model="u.name" type="text" ng-pattern="/^[0-9a-zA-Z]+$/" class="form-control" placeholder="Name" required>

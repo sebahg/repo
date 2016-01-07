@@ -1,10 +1,12 @@
 <div class="comic-container">
 
   <div class="row">
-    <div class="col-md-4 col-sm-6 panel panel-default" ng-repeat="comic in comics">
+    <div class="col-md-4 col-sm-6 panel panel-default" ng-repeat="comic in comics | filter:filtro | orderBy:campo:orden">
     <div class="panel-body">
       <label>{{comic.name}}</label>
       <img class="comic-img" ng-src="{{comic.image}}"></img>
+      <label>{{borrowed(comic)}} </label>
+      <label>Stars: {{comic.qualification}}</label>
     </div>
   </div>
 

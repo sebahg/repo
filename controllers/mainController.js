@@ -30,7 +30,40 @@
         $location.url("/login");
       }
 
+      $scope.orden= false;
+      $scope.campo = "name";
+      $scope.filtro = "";
 
+      $scope.qualification = function() {
+        $scope.orden= true;
+        $scope.campo = "qualification";
+      };
+
+      $scope.searches = function() {
+        $scope.orden= true;
+        $scope.campo = "searches";
+      };
+
+      $scope.recommended = function() {
+        $scope.orden= true;
+        $scope.campo = "recommended";
+      };
+
+      $scope.scienceFiction = function() {
+        $scope.filtro = "science fiction";
+      };
+
+      $scope.superHeroes = function() {
+        $scope.filtro = "superheroes";
+      };
+
+      $scope.borrowed = function(comic) {
+        if(comic.available){
+          return "available";
+        }else{
+          return "borrowed";
+        };
+      };
 
     //  $scope.user = JSON.parse(sessionStorage.getItem("user"));
       $scope.showProfile = false;

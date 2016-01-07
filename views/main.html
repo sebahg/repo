@@ -5,8 +5,15 @@
       <a class="navbar-brand" href="" ng-click="home()">Comics Store</a>
     </div>
     <div>
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#/main">Genres</a></li>
+      <ul class="nav nav-tabs">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="">Genres
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="" ng-click="scienceFiction()">Science Fiction</a></li>
+            <li><a href="" ng-click="superHeroes()">Superheroes</a></li>
+          </ul>
+
         <li><a href="#/main">Editions</a></li>
         <li><a href="#/main">News</a></li>
         <li><a href="#/main">Characters</a></li>
@@ -30,16 +37,13 @@
               Comics Bar
         </li>
         <li>
-            <a href="#/main">Popular</a>
+            <a href="#/main" ng-click="qualification()">Qualifications</a>
         </li>
         <li>
-            <a href="#/main">Qualifications</a>
+            <a href="#/main" ng-click="searches()">Top Searches</a>
         </li>
         <li>
-            <a href="#/main">Top Searches</a>
-        </li>
-        <li>
-            <a href="#/main">Recommended</a>
+            <a href="#/main" ng-click="recommended()">Recommended</a>
         </li>
     </ul>
 </div>

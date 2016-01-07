@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="styles/userProfile.css" />
     <link rel="stylesheet" type="text/css" href="styles/carrousel.css" />
     <link rel="stylesheet" type="text/css" href="styles/comics.css" />
+    <link rel="stylesheet" type="text/css" href="styles/footer.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular-route.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-messages.js"></script>
@@ -29,10 +30,10 @@
 
   <body background="images/background.jpg" ng-controller="StoreController" data-ng-init="getData()">
 
-    <div ng-controller="UserController">
 
-      <div id="wrap">
-        <div  ng-view>
+
+      <div id="wrap" ng-controller="UserController">
+        <div  id="main" ng-view>
 
         </div>
       </div>
@@ -40,6 +41,7 @@
       <footer-description></footer-description>
 
 
-  </div>
+
+
   </body>
 </html>

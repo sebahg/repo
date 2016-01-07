@@ -8,6 +8,8 @@
     "recommended:": true,
     "qualification": 4,
     "price":45,
+    "searches":760,
+    "classification":"superheroes",
     "creator": "seba",
     "date": "05/03/2015"
   },
@@ -20,6 +22,8 @@
     "recommended:": true,
     "qualification": 5,
     "price":60,
+    "searches":1289,
+    "classification":"superheroes",
     "creator": "seba",
     "date": "02/11/2015"
   },
@@ -32,6 +36,8 @@
     "recommended:": false,
     "qualification": 3,
     "price":23,
+    "searches":24,
+    "classification":"superheroes",
     "creator": "seba",
     "date": "05/02/2014"
   },
@@ -44,6 +50,8 @@
     "recommended:": false,
     "qualification": 4,
     "price":46,
+    "searches":64,
+    "classification":"science fiction",
     "creator": "seba",
     "date": "03/07/2015"
   },
@@ -56,6 +64,8 @@
     "recommended:": true,
     "qualification": 4,
     "price":89,
+    "searches":314,
+    "classification":"superheroes",
     "creator": "seba",
     "date": "05/12/2015"
   },
@@ -68,6 +78,8 @@
     "recommended:": true,
     "qualification": 1,
     "price":14,
+    "searches":900,
+    "classification":"science fiction",
     "creator": "seba",
     "date": "24/01/2015"
   },
@@ -80,6 +92,8 @@
     "recommended:": true,
     "qualification": 1,
     "price":45,
+    "searches":728,
+    "classification":"science fiction",
     "creator": "seba",
     "date": "24/01/2015"
   },
@@ -92,6 +106,8 @@
     "recommended:": true,
     "qualification": 5,
     "price":14,
+    "searches":246,
+    "classification":"science fiction",
     "creator": "seba",
     "date": "24/01/2015"
   },
@@ -104,6 +120,8 @@
     "recommended:": true,
     "qualification": 4,
     "price":56,
+    "searches":34,
+    "classification":"science fiction",
     "creator": "seba",
     "date": "24/01/2015"
   },
@@ -116,6 +134,8 @@
     "recommended:": false,
     "qualification": 3,
     "price":10,
+    "classification":"superheroes",
+    "searches":1120,
     "creator": "seba",
     "date": "24/01/2015"
   }

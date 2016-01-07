@@ -19,9 +19,6 @@
     $scope.register = function(){
         $scope.userExist = false;
 
-        console.log($scope.u.password);
-        console.log($scope.confpassword)
-
         if($scope.u.password == $scope.confpassword){
           $scope.matchPassword = true;
           //Busco el usuario en la lista de usuarios guardados

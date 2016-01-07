@@ -1,5 +1,5 @@
 
-var app = angular.module('comicsApp',['ngRoute','userController','loginController','mainController','storeController','registerController']);
+var app = angular.module('comicsApp',['ngRoute','directives','userController','loginController','mainController','storeController','registerController']);
 
 app.config(['$controllerProvider',function($controllerProvider) {
   $controllerProvider.allowGlobals();
@@ -23,7 +23,7 @@ app.config(function($routeProvider) {
     templateUrl: 'views/main.html'
   })
   .when('/404', {
-    controller: 'MainController',
+    controller: 'LoginController',
     templateUrl: 'views/404.html'
   })
   .otherwise({
@@ -31,59 +31,3 @@ app.config(function($routeProvider) {
   });
 
 });
-
-app.directive('footerDescription',function() {
-  return {
-    restrict: "E",
-    templateUrl: "views/footer.html"
-  };
-});
-
-app.directive('userProfile',function() {
-  return {
-    restrict: "E",
-    templateUrl: "views/userProfile.html"
-  };
-});
-
-app.directive('profiles',function() {
-  return {
-    restrict: "E",
-    templateUrl: "views/profiles.html"
-  };
-});
-
-app.directive('comics',function() {
-  return {
-    restrict: "E",
-    templateUrl: "views/comics.html"
-  };
-});
-
-app.directive('carrousel',function() {
-  return {
-    restrict: "E",
-    templateUrl: "views/carrousel.html"
-  };
-});
-
-var compareTo = function() {
-    return {
-        require: "ngModel",
-        scope: {
-            otherModelValue: "=compareTo"
-        },
-        link: function(scope, element, attributes, ngModel) {
-
-            ngModel.$validators.compareTo = function(modelValue) {
-                return modelValue == scope.otherModelValue;
-            };
-
-            scope.$watch("otherModelValue", function() {
-                ngModel.$validate();
-            });
-        }
-    };
-};
-
-app.directive("compareTo", compareTo);

@@ -1,0 +1,48 @@
+html, body {
+  height: 100%;
+  overflow-x:hidden;
+}
+
+#wrap {
+  min-height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  height: auto;
+}
+
+#main {
+ padding-bottom:150px; /*    this needs to be bigger than footer height*/
+}
+
+.footer {
+ position: fixed;
+  background-color: #000;
+  margin-top:-50px; /* negative value of footer height */
+  height: 50px;
+  width: 100%;
+  clear:both;
+}
+
+.footer ul
+{
+   padding-right: 0px;
+   padding-left: 0px;
+   padding-bottom: 0px;
+   padding-top: 0px;
+   margin: 0px;
+   float:left;
+   left:50%;
+   list-style-type:none;
+   margin:0 auto;
+   padding:0;
+   position:relative;
+}
+
+.footer li{
+  list-style-type: none;
+  display: inline;
+  float:left;
+  position:relative;
+  right:50%;
+  margin: 12px;
+}

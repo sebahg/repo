@@ -7,22 +7,22 @@
       $scope.myInterval = 3000;
       $scope.slides = [
         {
-          image:"images/AvengervsXmen.jpg"
+          image:"img/AvengervsXmen.jpg"
         },
         {
-          image:"images/Civil-War.jpg"
+          image:"img/Civil-War.jpg"
         },
         {
-          image:"images/Infinity.jpg"
+          image:"img/Infinity.jpg"
         },
         {
-          image:"images/Star-Wars.jpg"
+          image:"img/Star-Wars.jpg"
         },
         {
-          image:"images/Spider-Verse.jpg"
+          image:"img/Spider-Verse.jpg"
         },
         {
-          image:"images/Secret-Wars.jpg"
+          image:"img/Secret-Wars.jpg"
         }
       ];
 
@@ -33,6 +33,10 @@
       $scope.orden= false;
       $scope.campo = "name";
       $scope.filtro = "";
+
+      $scope.filter = function(filterName){
+        $scope.filtro = filterName;
+      };
 
       $scope.qualification = function() {
         $scope.orden= true;

@@ -11,7 +11,7 @@ html, body {
 }
 
 #main {
- padding-bottom:150px; /*    this needs to be bigger than footer height*/
+ padding-bottom:20px; /*    this needs to be bigger than footer height*/
 }
 
 .footer {

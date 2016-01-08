@@ -4,6 +4,7 @@
     app.controller('MainController', function($scope, $location) {
       $scope.user = JSON.parse(sessionStorage.getItem("user"));
 
+      // Datos para el corrusel
       $scope.myInterval = 3000;
       $scope.slides = [
         {
@@ -33,34 +34,29 @@
       $scope.orden= false;
       $scope.campo = "name";
       $scope.filtro = "";
+      $scope.filtroAdvance = "";
 
       $scope.filter = function(filterName){
+        $scope.campo = "name";
         $scope.filtro = filterName;
       };
 
-      $scope.qualification = function() {
-        $scope.orden= true;
-        $scope.campo = "qualification";
+      $scope.filterAdvance = function(filterName){
+        $scope.campo = "";
+        $scope.filtroAdvance = filterName;
       };
 
-      $scope.searches = function() {
-        $scope.orden= true;
-        $scope.campo = "searches";
+      $scope.orden = function(order) {
+        if(order == ''){
+          $scope.order= false;
+          $scope.campo = '';
+        }else{
+          $scope.order= true;
+          $scope.campo = order;
+        }
       };
 
-      $scope.recommended = function() {
-        $scope.orden= true;
-        $scope.campo = "recommended";
-      };
-
-      $scope.scienceFiction = function() {
-        $scope.filtro = "science fiction";
-      };
-
-      $scope.superHeroes = function() {
-        $scope.filtro = "superheroes";
-      };
-
+      // Function para devolver String sobre el estado del comic
       $scope.borrowed = function(comic) {
         if(comic.available){
           return "available";
@@ -69,7 +65,7 @@
         };
       };
 
-    //  $scope.user = JSON.parse(sessionStorage.getItem("user"));
+      // variables para controlar que se muestra en pantalla
       $scope.showProfile = false;
       $scope.showProfiles = false;
       $scope.showComics = true;
@@ -83,8 +79,6 @@
       $scope.isAdmin = function() {
         return ($scope.user.role == "admin");
       };
-
-      console.log($scope.isAdmin());
 
       $scope.showAdminUsersAction = function() {
         $scope.showProfiles = true;

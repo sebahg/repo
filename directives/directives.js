@@ -36,4 +36,18 @@
     };
   });
 
+  app.directive('navigationBar',function() {
+    return {
+      restrict: "E",
+      templateUrl: "views/navigation-bar.html"
+    };
+  });
+
+  app.directive('sideBar',function() {
+    return {
+      restrict: "E",
+      templateUrl: "views/side-bar.html"
+    };
+  });
+
 })();

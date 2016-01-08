@@ -1,82 +1,10 @@
 <!-- Navigation Bar-->
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="" ng-click="home()">Comics Store</a>
-    </div>
-    <div>
-      <ul class="nav nav-tabs">
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="">Genres
-          <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="" ng-click="filter('')">All</a></li>
-            <li><a href="" ng-click="filter('science fiction')">Science Fiction</a></li>
-            <li><a href="" ng-click="filter('superheroes')">Superheroes</a></li>
-          </ul>
-        </li>
-
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="">Characters
-          <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="" ng-click="filter('')">All</a></li>
-            <li><a href="" ng-click="filter('Thor')">Thor</a></li>
-            <li><a href="" ng-click="filter('Iron Man')">Iron Man</a></li>
-            <li><a href="" ng-click="filter('Hellcat')">Hellcat</a></li>
-            <li><a href="" ng-click="filter('Spider Man')">Spider Man</a></li>
-            <li><a href="" ng-click="filter('Venom')">Venom</a></li>
-            <li><a href="" ng-click="filter('Princess Leia')">Princess Leia</a></li>
-            <li><a href="" ng-click="filter('Dart Vader')">Dart Vader</a></li>
-            <li><a href="" ng-click="filter('Obi-Wan')">Obi-Wan</a></li>
-            <li><a href="" ng-click="filter('Anakin')">Anakin</a></li>
-            <li><a href="" ng-click="filter('Kanan')">Kanan</a></li>
-            <li><a href="" ng-click="filter('Hulk')">Hulk</a></li>
-          </ul>
-        </li>
-
-        <li><a href="#/main">Editions</a></li>
-        <li><a href="#/main">News</a></li>
-        <li>
-          <div>
-            <form class="navbar-form" role="search">
-              <div class="search">
-                <input type="text" class="form-control" placeholder="Search" name="q">
-              </div>
-            </form>
-          </div>
-        </li>
-      </ul>
-
-  </div>
-  <span class="user-right" ng-click="showProfileAction()">Welcome <a href="">{{user.user}}</a></span>
-  <span class="home" ng-click="home()"><a href="">Home</a></span>
-  <span class="admin" ng-show="isAdmin()" ng-click="showAdminUsersAction()"><a href="">Admin Users</a></span>
-  <span class="logout" ng-click="logout()"><a href="">Logout</a></span>
-
-  </div>
-
-</nav>
+<navigation-bar></navigation-bar>
 <!-- Navigation Bar-->
 
 <!-- Sidebar -->
-<div id="sidebar-wrapper">
-    <ul class="sidebar-nav">
-        <li class="sidebar-brand">
-              Comics Bar
-        </li>
-        <li>
-            <a href="#/main" ng-click="qualification()">Qualifications</a>
-        </li>
-        <li>
-            <a href="#/main" ng-click="searches()">Top Searches</a>
-        </li>
-        <li>
-            <a href="#/main" ng-click="recommended()">Recommended</a>
-        </li>
-    </ul>
-</div>
-<!-- /#sidebar-wrapper -->
+<side-bar></side-bar>
+<!-- Sidebar -->
 
 <!-- Carrousel -->
 <carrousel></carrousel>
